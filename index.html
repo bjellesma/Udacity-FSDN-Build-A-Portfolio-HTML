@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build a portfolio">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- TODO References a icon (16 x 16) to associate with your page. Save it in the root directory for IE -->
+    <link rel="icon" href="favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/nav.js"></script>
+    <title>Build a portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="hamburger">&#9776;</button>
+      <button class="cross">&#735;</button>
+      <!--Header-->
+      <header id="wj_header">
+        <div id="wj_logo">
+          <img src="http://placekitten.com/30/30" alt="logo" />
+        </div>
+        <div id="wj_heading">
+          Bill Jellesma
+        </div>
+      </header>
+      <nav id="wj_nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <!--<li><a href="/<?php $globals->getDomain(); ?>/blog/public">Blog</a></li>-->
+          <!--<li><a href="contact/index.html">Contact</a></li>-->
+          <li><a href="https://github.com/bjellesma">Github</a></li>
+        </ul>
+      </nav>
+      <div class="row">
+        <div class="col-md-6">
+          <picture>
+            <img id="wj_main_pic" src="images/profile-pic.jpg" alt="main picture" />
+          </picture>
+          <div id="wj_summary">
+            <h2 class="h2">Who is Bill Jellesma?</h2>
+            <p>I am a full stack engineer located in the Worcester, Massachusetts area.
+              I have a clear passion in technology as well as the technical prowess to apply it.
+              My goal is to use my knowledge to help create and further applications that will benefit society.
+              If you're interested in projects I've accomplished and want to learn more, please read on!
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <section id="wj_recent_work">
+            <h2 class="h2">Recent Work</h2>
+            <div class="wj_recent_work_item">
+              <a href="https://github.com/bjellesma/BillJellesmaHelpDesk"><img alt="PyChat" src="images/PyChat-1.PNG">
+              PyChat</a>
+              <p>A chat program written in Python</p>
+            </div>
+            <div class="wj_recent_work_item">
+              <a href="https://github.com/bjellesma/Java-Chat-and-Bot"><img alt="Java Chat" src="images/Java-Chat-1.PNG">
+              Java Chat and Bot</a>
+              <p>Written in Java, this program will connect you to a database via JDBC where you can talk with other friends or with a friendly bot named Steve.</p>
+            </div>
+            <div class="wj_recent_work_item">
+              <a href="https://github.com/bjellesma/Udacity-FSND-Movie-Trailer-Website"><img alt="Movie Trailer Website" src="images/Movie-Trailer-Website-1.PNG">
+              Movie Trailer Website</a>
+              <p>A mini python web server used to build a database of your favorite movie. Also makes use of IMDB's python API to grab metadata. Clicking on the items will bring up a youtube trailer.</p>
+            </div>
+            <div class="wj_recent_work_item">
+              <a href="https://github.com/bjellesma/PhpPalette"><img alt="Php Palette" src="images/PhpPalette-1.PNG">
+              PhpPalette</a>
+              <p>A netbeans plugin to assist in the learning of PHP.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer id="wj_footer">
+        <div class="row">
+          <a href="https://twitter.com/bjellesma" class="zocial-twitter">@bjellesma</a>
+          <a href="https://www.linkedin.com/in/williamjellesma" class="zocial-linkedin">William Jellesma</a>
+          <a href="https://github.com/bjellesma" class="zocial-github">Bill Jellesma</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

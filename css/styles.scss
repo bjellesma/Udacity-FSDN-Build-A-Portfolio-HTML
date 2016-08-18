@@ -1,0 +1,228 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  font-size: 40px;
+}
+
+$site-heading-font-size: 20px;
+$site-background-color: #131313;
+$site-font-family: 'Lato', sans-serif;
+$site-font-color: #fff;
+$site-nav-cols: 4;
+$breakpoints: (
+  x-small: 600px,
+  small: 800px,
+  large: 1300px
+);
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color:$site-background-color;
+  color: $site-font-color;
+  display: flex;
+}
+
+img,
+embed,
+object,
+video {
+  max-width:100%;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@media screen and (min-width:1300px){
+  .container {
+    max-width: 1300px;
+  }
+}
+
+/*nav*/
+.hamburger {
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 45px;
+  padding: 0px 15px 0px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+.cross {
+  background: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  padding: 0px 15px 0px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 3em;
+  line-height: 65px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+#wj_nav {
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 0.8em;
+  width: 100%;
+  background: #131313;
+  position: relative;
+  text-align: center;
+  display: none;
+  /*call to mixin */
+  @include respond-to(x-small) {
+      display: block;
+  }
+}
+
+#wj_nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+#wj_nav li {
+  display: block;
+  background: transparent;
+  padding: 15px 0 15px 0;
+  border-bottom: #1d1f20 1px solid;
+  width: 100% / $site-nav-cols;
+}
+
+#wj_nav ul li a {
+  text-decoration: none;
+  margin: 0px; color:#fff;
+}
+
+#wj_nav ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#wj_nav a {
+  text-decoration: none;
+  color: white;
+}
+
+#wj_nav a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+  .cross {
+    display: none;
+  }
+}
+/*/nav*/
+
+/* Header */
+#wj_header {
+  display: flex;
+}
+
+#wj_logo {
+  float:left;
+}
+
+#wj_heading {
+  width:70%;
+  float:right;
+  font-weight: 1200;
+  font-size: $site-heading-font-size;
+  font-family: 'Galada', cursive;
+}
+
+/* /Header /*
+
+/*Slider*/
+#wj_main_pic {
+  width: 100%;
+  order: 0;
+  @include respond-to(x-small) {
+    width: 512px;
+  }
+}
+/* /Slider */
+
+/* Summary */
+#wj_summary {
+  font-family: $site-font-family;
+  font-weight: 600;
+  width: 100%;
+  order: 1;
+}
+
+/* /Summary */
+#wj_recent_work {
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.wj_recent_work_item {
+  text-align: center;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 20px;
+  display: inline-block;
+  width: 100%;
+  max-width: 440px;
+}
+
+.wj_recent_work_item a {
+  text-decoration: none;
+  color: #666;
+}
+
+.wj_recent_work_item a:hover,
+.wj_recent_work_item a:active {
+  text-decoration: underline;
+}
+
+/* Contact form */
+form#wj_form {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#wj_name, #wj_email, #wj_request {
+  color: #000;
+}
